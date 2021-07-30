@@ -1,14 +1,19 @@
-.rodapé {
-    background-color: black;
+
+.dev-itens { 
+    padding: 1px;
+    font-size: 18px;
+    font-weight: bold;
+ 
 
 }
 
-.rodapé-itens {
+.dev-itens a img {
+    padding: 1em 0;
     margin: 0 auto;
-    padding: 1px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    
+    width: 10%;
+}
+
+.dev-img {
+    width:25%;
+    border-radius: 15%;
 }
