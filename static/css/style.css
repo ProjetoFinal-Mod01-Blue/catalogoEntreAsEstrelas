@@ -1,0 +1,14 @@
+.rodapé {
+    background-color: black;
+
+}
+
+.rodapé-itens {
+    margin: 0 auto;
+    padding: 1px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    
+}
