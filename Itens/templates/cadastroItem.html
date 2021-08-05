@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    
+  
+
+        <!-- <h1>Administração</h1>
+        <ul>
+            <a id="btn-criar"><li>
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                Cadastrar Item</li>
+            </a>  
+            <a id="btn-listar"><li>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                Listar Itens</li>
+            </a> 
+            <a href="/"><li>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home</li>
+            </a>
+                         
+        </ul>
+    </aside> -->
+    
+    <section id="body">
+
+        
+        <article id="new">
+            <form action='/new' method="POST">
+
+              
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome do item" id="nome" name="nome">
+
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem">
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do item"></textarea>
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+        </article>
+        
+        <article id="lista">
+            <table>
+                <thead> 
+                    <tr>
+                        <th>#ID</th>
+                        <th>Nome</th>
+                        <th>Imagem</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in itens %}
+                    <tr>
+                        <td>{{p.id}}</td>
+                        <td>{{p.nome}}</td>
+                        <td><a href="{{p.imagem}}" target="_blank"></a>{{p.imagem}}</td>
+                        <td>{{p.descricao}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+           
+        </article>
+        
+
+    </section>
+
+    <aside id="right">        
+        
+    </aside>
+
+
+    <script src="../static/cadastroItem.js"></script>
+</body>
+</html>
