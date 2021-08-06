@@ -6,3 +6,4 @@ from flask_sqlalchemy import SQLAlchemy # ORM responsável por realizar as opera
 
 app = Flask(__name__)
 app.secret_key = 'bluedtech'
+
