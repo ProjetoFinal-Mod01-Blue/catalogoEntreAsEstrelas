@@ -1,12 +1,14 @@
+# importando as
 from flask import Flask, render_template, redirect, request, session, flash
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy 
+from config import banco
 
 app = Flask(__name__)
 app.secret_key = 'bluedtech' 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lgcvxgbj:43ujLIsvMZ4vHhiT1zW9RwLuvwYFrgFP@motty.db.elephantsql.com/lgcvxgbj'
+app.config['SQLALCHEMY_DATABASE_URI'] = banco
 db = SQLAlchemy(app)
-
+# ------------------------------------------------------------------------------------
 class Planetas(db.Model): 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     imagem = db.Column(db.String(500), nullable=False)
@@ -21,17 +23,50 @@ class Planetas(db.Model):
         self.temperatura = temperatura
         self.gravidade = gravidade
         self.demais_informacoes = demais_informacoes
+# ------------------------------------------------------------------------------------
+class Usuarios(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    nome = db.Column(db.String(500), nullable=False)
+    senha = db.Column(db.String(150), nullable=False)
+
+    def __init__(self, nome, senha):
+      self.nome = nome
+      self.senha = senha
+
 
 @app.route('/')
 def index():
-   # session['usuario_logado'] = None
+   session['usuario_logado'] = None
    projetos = Planetas.query.all() 
    return render_template('index.html', projetos=projetos) 
 
 @app.route('/adm')
 def adm():
+   if session['usuario_logado'] == None or 'usuario_logado' not in session:
+      flash("Faça login antes de entar nessa rota")
+      return redirect('/login')    
+
    projetos = Planetas.query.all() 
    return render_template('adm.html', projetos=projetos) 
+
+
+@app.route('/login')     
+def login():
+   session['usuario_logado'] = None
+   return render_template('login.html')
+
+
+@app.route('/auth', methods=['GET', 'POST'])
+def auth():
+
+   if request.method == 'POST':
+      if request.form['senha'] == 'teste':
+         session['usuario_logado'] = True
+         return redirect('/adm')
+      else:
+         flash('Acesso Negado')
+         return redirect('/login')
+      
 
 
 @app.route('/new', methods=['GET', 'POST'])
