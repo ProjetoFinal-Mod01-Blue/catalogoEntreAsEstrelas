@@ -1,0 +1,43 @@
+/* -------------------------- Página ADM----------------------------- */
+@media screen and (max-width: 1682px){
+    aside#right{
+      display: none;
+    }
+  
+    aside#left{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      padding: 1rem;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      position: relative;
+    }
+  
+    aside#left h1{
+      margin-right: auto;
+    }
+  
+    aside#left ul{
+      display: flex;
+      padding: 0;
+      margin-right: 5rem;
+    }
+  
+    form{
+      width: 100%;
+    }
+    article#new{
+      padding: 2%;
+    }
+  
+    article#lista{
+      padding: 2%;
+    }
+  
+    article#lista table{
+      width: 100%;
+    }
+  }
