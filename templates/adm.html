@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/adm.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Portfólio | Adm</title>
+    <title>Catálago| Adm</title>
 </head>
 
 <body>
@@ -33,11 +33,11 @@
         <ul>
             <a id="btn-criar"><li>
                 <i class="fa fa-th-list" aria-hidden="true"></i>
-                Criar projetos</li>
+                Inserir novo item</li>
             </a>  
             <a id="btn-listar"><li>
                 <i class="fa fa-plus-square" aria-hidden="true"></i>
-                Listar projetos</li>
+                Listar planetas</li>
             </a> 
             <a href="/"><li>
                 <i class="fa fa-home" aria-hidden="true"></i>
@@ -57,7 +57,7 @@
         <article id="new">
             <form action='/new' method="POST">
 
-                <h1>Cadastre um novo projeto</h1>
+                <h1>Cadastre um novo astro</h1>
 
                 <label for="imagem">Imagem</label>
                 <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem">
@@ -117,7 +117,7 @@
         <article id="edit">
             <form action='/edit/{{projetoEdit.id}}' method="POST">
 
-                <h1>Editar um projeto</h1>
+                <h1>Editar um astro</h1>
 
                 <label for="imagem">Imagem</label>
                 <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem">
