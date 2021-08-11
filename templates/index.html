@@ -46,23 +46,50 @@
     </section>
     <section id="work">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-inner" style="background-color: white;">
-          {% for p in projetos %}
-          <div class="carousel-item">
-            <img class="card-img-top" src="{{p.imagem}}" alt="{{p.nome}}">
+        <div class="carousel-inner" style="background-color:transparent;">
+          <!-- <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{p.nome}}</h5>
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperatura média: {{p.temperatura}} </li>
-              <li class="list-group-item">Gravidade: {{p.gravidade}}</li>                        
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
             </ul>
-            <p class="card-text">Demais informações: {{p.demais_informacoes}}</p>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div> -->
+          {% for p in projetos %}
+          
+          <div class="carousel-item">
+            <div class="card" style="width: 50vw; height: 80vh">
+              <img class="card-img-top" style="width: 15vw; height: 15vw"  src="{{p.imagem}}" alt="{{p.nome}}">
+              <div class="card-body">
+                <h5 class="card-title">{{p.nome}}</h5>
+              </div>
+              <ul class="list-group list-group-flush" style="display: flex; flex-direction: column; align-items: center; ">
+                <li class="list-group-item">Temperatura média: {{p.temperatura}} </li>
+                <li class="list-group-item">Gravidade: {{p.gravidade}}</li>
+                <li class="list-group-item">{{p.demais_informacoes}}</li>                               
+              </ul>
+              <!-- <p class="card-text">Demais informações: </p> -->
+            </div>
           </div>
           {% endfor %}     
         </div>
-        <div class="carousel-item active">
-          <h2 class="testimonial-text" style="color: white">Clique em alguma seta para começar.</h2>
+        <div class="carousel-item active" style="background: no-background">
+          <!-- <h2 class="testimonial-text" style="color: white">Clique na seta para começar.</h2> -->
+          <div class="card" style="width: 50vw; height: 50vh">
+            <!-- <img class="card-img-top" style="width: 15vw; height: 15vw"> -->
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_ufkgreod.json" background="transparent"  speed="1"  style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Escolha uma das setas</h5>
+            </div> -->
+          </div>
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
