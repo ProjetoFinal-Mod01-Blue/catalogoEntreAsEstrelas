@@ -29,7 +29,7 @@
         <!-- Código copiado da documentação: https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/ -->
         
 
-        <h1>Administração</h1>
+        <h1>Painel de administração</h1>
         <ul>
             <a id="btn-criar"><li>
                 <i class="fa fa-th-list" aria-hidden="true"></i>
@@ -120,20 +120,20 @@
                 <h1>Editar um projeto</h1>
 
                 <label for="imagem">Imagem</label>
-                <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem">
+                <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem" value="{{projetoEdit.imagem}}">
 
                 <label for="nome">Planeta</label>
-                <input type="text" placeholder="Nome do Planeta" id="nome" name="nome">
+                <input type="text" placeholder="Nome do Planeta" id="nome" name="nome" value="{{projetoEdit.nome}}">
 
                 <label for="temperatura">Temperatura em °C</label>
-                <input type="text" placeholder="Temperatura em °C" id="temperatura" name="temperatura">
+                <input type="text" placeholder="Temperatura em °C" id="temperatura" name="temperatura" value="{{projetoEdit.temperatura}}">
 
                 <label for="gravidade">Gravidade</label>
-                <input type="text" placeholder="Gravidade" id="gravidade" name="gravidade">
+                <input type="text" placeholder="Gravidade" id="gravidade" name="gravidade" value="{{projetoEdit.gravidade}}">
 
                 <label for="demais_informacoes">Demais informações</label>
                 <textarea name="demais_informacoes" id="demais_informacoes" cols="30" rows="10"
-                    placeholder="Digite mais informações do Planeta"></textarea>
+                    placeholder="Digite mais informações do Planeta" value="{{projetoEdit.demais_informacoes}}"></textarea>
 
                 <div>
                     <a href="/adm">Cancelar</a>
