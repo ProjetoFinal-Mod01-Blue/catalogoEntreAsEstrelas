@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/adm.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Catálago| Adm</title>
 </head>
 
 <body>
 
-    <article id="msg">
+    <!-- <article id="msg">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul class=flashes>
@@ -23,7 +24,7 @@
         </ul>
         {% endif %}
         {% endwith %}
-    </article>
+    </article> -->
 
     <aside id="left">
 
@@ -121,20 +122,20 @@
                 <h1>Editar um astro</h1>
 
                 <label for="imagem">Imagem</label>
-                <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem">
+                <input type="text" placeholder="Link da imagem do Planeta" id="imagem" name="imagem" value="{{ projetoEdit.imagem }}">
 
                 <label for="nome">Planeta</label>
-                <input type="text" placeholder="Nome do Planeta" id="nome" name="nome">
+                <input type="text" placeholder="Nome do Planeta" id="nome" name="nome" value="{{ projetoEdit.nome }}">
 
                 <label for="temperatura">Temperatura em °C</label>
-                <input type="text" placeholder="Temperatura em °C" id="temperatura" name="temperatura">
+                <input type="text" placeholder="Temperatura em °C" id="temperatura" name="temperatura" value="{{ projetoEdit.temperatura }}">
 
                 <label for="gravidade">Gravidade</label>
-                <input type="text" placeholder="Gravidade" id="gravidade" name="gravidade">
+                <input type="text" placeholder="Gravidade" id="gravidade" name="gravidade" value="{{ projetoEdit.gravidade }}">
 
                 <label for="demais_informacoes">Demais informações</label>
                 <textarea name="demais_informacoes" id="demais_informacoes" cols="30" rows="10"
-                    placeholder="Digite mais informações do Planeta"></textarea>
+                    placeholder="Digite mais informações do Planeta" value="{{ projetoEdit.demais_informacoes }}"></textarea>
 
                 <div>
                     <a href="/adm">Cancelar</a>
@@ -152,7 +153,7 @@
         
     </aside>
 
-
+    <script src="/static/js/setup.js"></script>
     <script src="../static/js/adm.js"></script>
 </body>
 

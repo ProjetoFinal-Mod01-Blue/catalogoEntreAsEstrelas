@@ -46,7 +46,7 @@ def new():
       )
       db.session.add(projeto)
       db.session.commit()
-      flash('Projeto Criado!!! ')
+      flash('Card de um novo astro foi criado!!! ')
       return redirect('/adm')
 
 @app.route('/delete/<id>')
