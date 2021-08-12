@@ -1,0 +1,23 @@
+Sobre o projeto
+Inicialmente criamos um jogo de ficção interativa utilizando orientação a objeto em Python, seu tema foi baseado no filme Interestellar.
+Ao concluirmos a primeira fase do projeto, decidimos que ele cresceria junto conosco, ele seria o balizador da nossa evolução como programadores.
+A segunda fase do projeto tem a finalidade de criar uma aplicação web em forma de catálogo, usando HTML, CSS, JavaScript, Flask e SQL.# catalogoEntreAsEstrelas
+
+Usamos o seguinte direcionamento para a construção da página:
+
+Construimos todo layout com HTML e CSS, sem animações ou dados dinâmicos.
+Adicionamos validações de campos e animações com JavaScript.
+Implementamos a aplicação no escopo de um projeto Flask e criamos as rotas para
+renderização das páginas HTML.
+Conectamos a aplicação ao banco de dados e criamos as rotas do CRUD.
+Fizemos o deploy da aplicação no Heroku.
+Usamos boas práticas de programação para criar um projeto limpo e escalável.
+
+Cada página desta aplicação possui um objetivo:
+Home: trás as boas vindas ao usuário e um breve resumo do tema e jogo propostos.
+Sobre: detalha a história e a motivação do projeto.
+Catálogo: mostra os cards de todos os planetas e suas características.
+Administrador: permite cadastrar, editar ou excluir os itens do catálogo. Esta página está "oculta" e
+representada por um ícone (engrenagem) dentro do catálogo.
+Desenvolvedores: conta um pouquinho da história do nosso time.
+Na terceira fase desse projeto queremos implementar o jogo e aprimorá-lo com os novos aprendizados provenientes da especialização que faremos no terceiro módulo do curso.
