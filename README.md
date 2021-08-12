@@ -46,7 +46,7 @@ Ficamos muito feliz com o resultado :slight_smile:
 - Por último, dê um <code>code runner</code> e conheça nosso catálago.
 
 ### :mag: Link do projeto
-(A colocar)
+<a href="https://interstellarcode.herokuapp.com/">Catálago Entre as Estrelas</a>
 ##
 ### 💻 Linguagens utilizadas
 - Python
