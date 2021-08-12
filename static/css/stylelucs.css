@@ -45,6 +45,12 @@ lottie-player {
   margin: 0 0 0 0;
 }
 
+footer{
+  color: white;
+  text-align: center;
+	border-top: 1px solid rgba(137, 130, 247, .2);
+}
+
 #home {
   /* background-color: #ddd; */
     background: linear-gradient(to right, #04073B, #35316B);
