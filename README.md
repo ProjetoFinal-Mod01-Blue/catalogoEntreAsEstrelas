@@ -38,6 +38,7 @@ se limite, seja criativo!
     
 Na terceira fase desse projeto queremos implementar o jogo e aprimorá-lo com os novos aprendizados provenientes da especialização que faremos no terceiro módulo do curso.
 Ficamos muito feliz com o resultado :slight_smile:
+##
 
 ### :arrow_forward: Como rodar o código ?
 - Use o <code>git clone</code> e baixe em seu repositório local.
@@ -46,7 +47,7 @@ Ficamos muito feliz com o resultado :slight_smile:
 
 ### :mag: Link do projeto
 (A colocar)
-
+##
 ### 💻 Linguagens utilizadas
 - Python
 - HTML/CSS
@@ -57,7 +58,7 @@ Ficamos muito feliz com o resultado :slight_smile:
 
 ### :globe_with_meridians: Banco de Dados 
 - SQLAlchemy
-
+##
 
 ### 🧠 Conhecimentos Utilizados
 - HTML/CSS
