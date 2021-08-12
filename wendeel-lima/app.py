@@ -2,13 +2,14 @@ from flask import Flask, render_template, redirect, request, session, flash
 from flask_sqlalchemy import SQLAlchemy 
 from config import banco
 
-#iniciando nossa aplicação flask
+
 app = Flask(__name__)
 app.secret_key = 'bluedtech' 
 
 app.config['SQLALCHEMY_DATABASE_URI'] = banco
 db = SQLAlchemy(app)
-# ------------------------------------------------------------------------------------
+
+
 class Planetas(db.Model): 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     imagem = db.Column(db.String(500), nullable=False)
@@ -23,16 +24,6 @@ class Planetas(db.Model):
         self.temperatura = temperatura
         self.gravidade = gravidade
         self.demais_informacoes = demais_informacoes
-# ------------------------------------------------------------------------------------
-# class Usuarios(db.Model):
-#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-#     nome = db.Column(db.String(500), nullable=False)
-#     senha = db.Column(db.String(150), nullable=False)
-
-#     def __init__(self, nome, senha):
-#       self.nome = nome
-#       self.senha = senha
-
 
 @app.route('/')
 def index():
@@ -67,7 +58,6 @@ def auth():
          flash('Acesso Negado')
          return redirect('/login')
       
-
 
 @app.route('/new', methods=['GET', 'POST'])
 def new():
@@ -108,7 +98,7 @@ def edit(id):
 @app.route('/logout')
 def logout():
    session['usuario_logado'] = None
-   return render_template('index.html')
+   return redirect('/')
 
 if __name__ == '__main__':
    db.create_all()
