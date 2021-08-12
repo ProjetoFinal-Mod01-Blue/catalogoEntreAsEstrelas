@@ -74,6 +74,6 @@ Ficamos muito feliz com o resultado :slight_smile:
  | :---: | :---: | :---: | :---: | :---:|
   
 ### :heavy_check_mark: Contribuições
-<p>Teve uma idéia legal de como melhorar o jogo e está afim de colocar em prática? <a href="https://github.com/ProjetoFinal-Mod01-Blue/EntreAsEstrelas/pulls">Contribua Conosco!</a></p>
+<p>Teve uma idéia legal de como melhorar nosso projeto e está afim de colocar em prática? <a href="https://github.com/ProjetoFinal-Mod01-Blue/EntreAsEstrelas/pulls">Contribua Conosco!</a></p>
 
 ##
