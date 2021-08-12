@@ -15,6 +15,7 @@ Seu site precisa ter obrigatoriamente os seguintes itens:
 
 Você pode mesclar algumas páginas se quiser, como a página inicial e a página dos desenvolvedores do projeto, ou a página de cadastro com a listagem dos itens. Não
 se limite, seja criativo!
+##
 
 ### 🎲 Sobre o que é este catálago ? 
   Inicialmente criamos um jogo de ficção interativa utilizando orientação a objeto em Python, seu tema foi baseado no filme Interestellar. 
