@@ -1,8 +1,8 @@
-# importando as
 from flask import Flask, render_template, redirect, request, session, flash
 from flask_sqlalchemy import SQLAlchemy 
 from config import banco
 
+#iniciando nossa aplicação flask
 app = Flask(__name__)
 app.secret_key = 'bluedtech' 
 
@@ -24,14 +24,14 @@ class Planetas(db.Model):
         self.gravidade = gravidade
         self.demais_informacoes = demais_informacoes
 # ------------------------------------------------------------------------------------
-class Usuarios(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    nome = db.Column(db.String(500), nullable=False)
-    senha = db.Column(db.String(150), nullable=False)
+# class Usuarios(db.Model):
+#     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+#     nome = db.Column(db.String(500), nullable=False)
+#     senha = db.Column(db.String(150), nullable=False)
 
-    def __init__(self, nome, senha):
-      self.nome = nome
-      self.senha = senha
+#     def __init__(self, nome, senha):
+#       self.nome = nome
+#       self.senha = senha
 
 
 @app.route('/')
@@ -60,7 +60,7 @@ def login():
 def auth():
 
    if request.method == 'POST':
-      if request.form['senha'] == 'teste':
+      if request.form['senha'] == 'admin':
          session['usuario_logado'] = True
          return redirect('/adm')
       else:
@@ -105,7 +105,10 @@ def edit(id):
 
    return render_template('adm.html', projetoEdit=projetoEdit)
 
-
+@app.route('/logout')
+def logout():
+   session['usuario_logado'] = None
+   return render_template('index.html')
 
 if __name__ == '__main__':
    db.create_all()

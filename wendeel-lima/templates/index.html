@@ -1,64 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en" >
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-   <link href="../static/css/style.css" rel="stylesheet">
-
-   <title>CRUD</title>
+  <meta charset="UTF-8">
+  <title>Catálogo - Entre as Estrelas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/css/stylelucs.css">
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  
-  <a id="config" href="/login"><i class="fa fa-cog" aria-hidden="true"></i>botão Administração</a>
-  
-    <div class="container text-center my-3" id="projetos">
-      <h2 class="font-weight-light">Bootstrap 4 - Multi Item Carousel</h2>
-      <div class="row mx-auto my-auto">
-          <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-              <div class="carousel-inner w-100" role="listbox">
-                  <div class="carousel-item active">
-                      <div class="col-md-4">
-                        {% for p in projetos %}
-                        <div class="card" style="width: 18rem;">                          
-                           <img class="card-img-top" src="{{p.imagem}}" alt="{{p.nome}}">
-                           <div class="card-body">
-                             <h5 class="card-title">{{p.nome}}</h5>
-                           </div>
-                           <ul class="list-group list-group-flush">
-                             <li class="list-group-item">Temperatura média: {{p.temperatura}} </li>
-                             <li class="list-group-item">Gravidade: {{p.gravidade}}</li>                        
-                           </ul>
-                           <p class="card-text">Demais informações: {{p.demais_informacoes}}</p>
-                         </div>
-                        {% endfor %}                        
-                      </div>
-                       
-                  </div> 
-              </div>
-              <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-              </a>
-          </div>
+<!-- partial:index.partial.html -->
+
+  <header id="nav-wrapper">
+    <nav id="nav">
+      <div class="nav left">
+        <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">Catálogo - Entre as Estrelas</a></h1></span>
+        <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
       </div>
-      <h5 class="mt-2">Advances one slide at a time</h5>
-   </div>
-   
+      <div class="nav right">
+        <a href="#home" class="nav-link active"><span class="nav-link-span"><span class="u-nav">Home</span></span></a>
+        <a href="#about" class="nav-link"><span class="nav-link-span"><span class="u-nav">Sobre</span></span></a>
+        <a href="#work" class="nav-link"><span class="nav-link-span"><span class="u-nav">Catálogo</span></span></a>
+        <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Desenvolvedores</span></span></a>
+        <a href="/adm" class="nav-link"><span class="nav-link-span"><span class="u-nav"><i class="fas fa-spin fa-cog"></i></span></span></a>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_ZQhQzO.json" background="transparent"  speed="1"  style="width: 95vw; height: 400px;" loop autoplay></lottie-player>
+        <h2>Bem-vindo ao catálogo de planetas Entre as Estrelas</h2>
+        <h4>O Entre as Estrelas é um jogo baseado no filme Interstellar. O jogo-base foi desenvolvido em Python e segue a história de um piloto e também comandante da nave que deve explorar o espaço através de um buraco de minhoca em busca de um novo planeta habitável para continuar com a espécie humana.</h4>
+    </section>
+    <section id="about">
 
-   <script src="../static/js/script.js" ></script>
+    </section>
+    <section id="work">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner" style="background-color:transparent;">
+          <!-- <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div> -->
+          
+          
+
+          {% for p in projetos %}
+          
+          <div class="carousel-item">
+            
+            <div class="card" style="width: 50vw; height: 80vh">
+              <img class="card-img-top" style="width: 15vw; height: 15vw"  src="{{p.imagem}}" alt="{{p.nome}}">
+              <div class="card-body">
+                <h5 class="card-title">{{p.nome}}</h5>
+              </div>
+              <ul class="list-group list-group-flush" style="display: flex; flex-direction: column; align-items: center; ">
+                <li class="list-group-item">Temperatura média: {{p.temperatura}} </li>
+                <li class="list-group-item">Gravidade: {{p.gravidade}}</li>
+                <li class="list-group-item">{{p.demais_informacoes}}</li>                               
+              </ul>
+              <!-- <p class="card-text">Demais informações: </p> -->
+            </div>
+          </div>
+          {% endfor %}     
+        </div>
+        <div class="carousel-item active" style="background: no-background">
+          <!-- <h2 class="testimonial-text" style="color: white">Clique na seta para começar.</h2> -->
+          <div class="card" style="width: 50vw; height: 50vh">
+            <!-- <img class="card-img-top" style="width: 15vw; height: 15vw"> -->
+            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_ufkgreod.json" background="transparent"  speed="1"  style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+            <!-- <div class="card-body">
+              <h5 class="card-title">Escolha uma das setas</h5>
+            </div> -->
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" ></span>
+      
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" ></span>
+          
+        </button>
+      </div>
+    </section>
+    <section id="contact">
+
+    </section>
+  </main>
+
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="/static/js/script.js"></script>
+
 </body>
-
-
-
 </html>
-
