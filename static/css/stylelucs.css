@@ -366,3 +366,11 @@ h3{
 .hblue{
   color: white
 }
+
+footer{
+  text-align: center;
+  color: white;
+	padding: 5px;
+	margin: 0px 0px 0px 40px;
+	border-top: 1px solid rgba(137, 130, 247, .2);
+}
