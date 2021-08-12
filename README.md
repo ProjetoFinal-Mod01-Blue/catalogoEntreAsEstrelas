@@ -39,7 +39,7 @@ se limite, seja criativo!
 Na terceira fase desse projeto queremos implementar o jogo e aprimorá-lo com os novos aprendizados provenientes da especialização que faremos no terceiro módulo do curso.
 Ficamos muito feliz com o resultado :slight_smile:
 
-### 🎮 Como rodar o código ?
+### :arrow_forward: Como rodar o código ?
 - Use o <code>git clone</code> e baixe em seu repositório local.
 - Em seu terminal <code>vscode</code> faça download das Libs <code>py -m pip install flask</code> e <code>py -m pip install sqlachemy </code>.
 - Por último, dê um <code>code runner</code> e conheça nosso catálago.
@@ -52,7 +52,7 @@ Ficamos muito feliz com o resultado :slight_smile:
 - HTML/CSS
 - JavaScript
 
-### :yarn: Frameworks utilizadss
+### :yarn: Frameworks utilizados
 - Flask
 
 ### :globe_with_meridians: Banco de Dados 
